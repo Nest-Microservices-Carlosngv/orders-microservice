@@ -13,6 +13,8 @@ FROM node:21-alpine AS builder
 ARG ORDERS_DATABASE_URL
 ENV DATABASE_URL=$ORDERS_DATABASE_URL
 
+RUN echo "database url ::: ${ORDERS_DATABASE_URL}"
+
 WORKDIR /usr/src/app
 
 # ? Copiar dependencias sin necesidad de descargarlas
